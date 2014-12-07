@@ -6,7 +6,7 @@
   <name>KeeCore</name>
   
    <build>
-    <finalName>com.KeeCode.KeeCore</finalName>
+    <finalName>KeeCore</finalName>
     <plugins>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
@@ -14,7 +14,7 @@
   </plugins>
 </build>
  <repositories>
-        <!-- Bukkit kann im folgenden Repository gefunden werden -->
+        <!-- Bukkit kann im folgenden Repository gefunden werden   YEAH-->
         <repository>
           <id>bukkit-repo</id>
           <url>http://repo.bukkit.org/content/groups/public/</url>
