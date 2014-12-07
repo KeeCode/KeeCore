@@ -10,9 +10,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
 
-import DragonCore.DragonCore;
+import com.KeeCode.KeeCore.KeeCore;
 
 public abstract class DragonPlugin implements Addon  {
 	public String name;
@@ -21,7 +20,7 @@ public abstract class DragonPlugin implements Addon  {
 	public void onLoad() {}
 
 	public void saveConfig(FileConfiguration cfg) {
-		File f = new File(DragonCore.plugin.getDataFolder() + "/addons/" + name + "/Config.dc");
+		File f = new File(KeeCore.plugin.getDataFolder() + "/addons/" + name + "/Config.dc");
 		try {
 			cfg.save(f);
 		} catch (IOException e) {
@@ -31,7 +30,7 @@ public abstract class DragonPlugin implements Addon  {
 	public void reloadConfig() {}
 
 	public FileConfiguration getConfig() {
-		File f = new File(DragonCore.plugin.getDataFolder() + "/addons/" + name + "/Config.dc");
+		File f = new File(KeeCore.plugin.getDataFolder() + "/addons/" + name + "/Config.dc");
 		if(f.exists() == false){
 			try {
 				f.createNewFile();
@@ -48,15 +47,13 @@ public abstract class DragonPlugin implements Addon  {
 		System.out.println("[PLUGIN INFO] " + message);
 	}
 
-	public void onChat(AsyncPlayerChatEvent e) {}
-
 	public void registerEvent(Listener l) {
-		Bukkit.getPluginManager().registerEvents(l, DragonCore.plugin);
+		Bukkit.getPluginManager().registerEvents(l, KeeCore.plugin);
 		listener.add(l);
 	}
 	
 	public File getDatafolder(){
-		File f = new File(DragonCore.plugin.getDataFolder() + "/addons/" + name + "/");		
+		File f = new File(KeeCore.plugin.getDataFolder() + "/addons/" + name + "/");		
 		if(f.exists() == false){
 			f.mkdirs();
 		}

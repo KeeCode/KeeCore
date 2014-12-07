@@ -9,7 +9,7 @@ import java.util.Map;
 import org.bukkit.plugin.InvalidDescriptionException;
 import org.bukkit.plugin.InvalidPluginException;
 
-import DragonCore.DragonCore;
+import com.KeeCode.KeeCore.KeeCore;
 
 public class AddonLoader {
 	File file;
@@ -17,7 +17,7 @@ public class AddonLoader {
 	public ArrayList<DragonPlugin> loadAddons(){
 		ArrayList<DragonPlugin> plugins = new ArrayList<DragonPlugin>();
 
-		File pluginDir = new File(DragonCore.getInstance().getDataFolder() + "/addons");
+		File pluginDir = new File(KeeCore.getInstance().getDataFolder() + "/addons");
 		if(pluginDir.exists() == false)
 		pluginDir.mkdirs();
 
@@ -36,7 +36,7 @@ public class AddonLoader {
 			{
 				   final PluginDescriptionFile description;
 			        try {
-			            description = DragonCore.plugin.getPluginDescription(f);
+			            description = KeeCore.plugin.getPluginDescription(f);
 			        } catch (InvalidDescriptionException ex) {
 			            throw new InvalidPluginException(ex);
 			        }
@@ -59,7 +59,7 @@ public class AddonLoader {
 			    
 			                dp = constructor.newInstance();
 			                dp.name = description.getName();
-			                DragonCore.plugin.registerCommands(commands, dp);
+			                KeeCore.plugin.registerCommands(commands, dp);
 			                System.out.println(dp.name);
 	                	  
 	      				dp.onLoad();

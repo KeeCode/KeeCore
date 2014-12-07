@@ -6,7 +6,7 @@
   <name>KeeCore</name>
   
    <build>
-    <finalName>DragonCore</finalName>
+    <finalName>com.KeeCode.KeeCore</finalName>
     <plugins>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>

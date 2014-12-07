@@ -1,4 +1,4 @@
-package DragonCore;
+package com.KeeCode.KeeCore;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -29,10 +29,10 @@ import AddonManager.DragonPlugin;
 import AddonManager.PluginCommandYamlParser;
 import AddonManager.PluginDescriptionFile;
 
-public class DragonCore extends JavaPlugin {
+public class KeeCore extends JavaPlugin {
 	
 	public ArrayList<DragonPlugin> plugins;
-	public static DragonCore plugin;
+	public static KeeCore plugin;
 	AddonLoader a = new AddonLoader();
 	public HashMap<Command, DragonPlugin> commandMap = new HashMap<Command, DragonPlugin>();
 	
@@ -55,7 +55,7 @@ public class DragonCore extends JavaPlugin {
 	}
 	
 	
-	public static DragonCore getInstance(){
+	public static KeeCore getInstance(){
 		return plugin;
 	}
 
@@ -123,10 +123,10 @@ public class DragonCore extends JavaPlugin {
 		 if(cmd.getName().equalsIgnoreCase("ds")){
 			 if(args.length == 0){
 				 sender.sendMessage(new String[]{
-						 "§b[========] §cDragonSuite §b[========]",
-						 "§aDragonSuite - Your expandable suite",
-						 "§6Developed by DragonSephHD Aka. Peace1333",
-						 "§b[========] §cDragonSuite §b[========]",
+						 "§b[========] §cKeeCore §b[========]",
+						 "§aKeeCore - Your expandable suite",
+						 "§6Developed by DragonSephHD Aka. Keegan",
+						 "§b[========] §cKeeCore §b[========]",
 				 });
 				 return true;
 			 }

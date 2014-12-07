@@ -1,5 +1,5 @@
-main: DragonCore.DragonCore
-name: DragonCore
+main: com.KeeCode.KeeCore.KeeCore
+name: com.KeeCode.KeeCore
 author: DragonSephHD
 version: 1.0
 commands:
