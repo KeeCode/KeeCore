@@ -31,8 +31,6 @@ import AddonManager.PluginDescriptionFile;
 
 public class KeeCore extends JavaPlugin {
 	
-	//Update
-	
 	public ArrayList<DragonPlugin> plugins;
 	public static KeeCore plugin;
 	AddonLoader a = new AddonLoader();
