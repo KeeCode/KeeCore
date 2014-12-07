@@ -1,0 +1,8 @@
+main: DragonCore.DragonCore
+name: DragonCore
+author: DragonSephHD
+version: 1.0
+commands:
+     ds:
+          usage: /<command>
+          description: Main command
